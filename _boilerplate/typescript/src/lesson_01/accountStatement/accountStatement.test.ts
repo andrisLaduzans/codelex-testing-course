@@ -29,23 +29,23 @@ describe("account statement", () => {
     );
   });
 
-  it("balance entries should have time of transaction", () => {
-    const account = accountStatement();
-    const depositTime = new Date("12/17/22");
-    account.deposit(500);
+  // it("balance entries should have time of transaction", () => {
+  //   const account = accountStatement();
+  //   const depositTime = new Date("12/17/22");
+  //   account.deposit(500);
 
-    const withdrawTime = new Date("12/18/22");
-    account.withdraw(200);
+  //   const withdrawTime = new Date("12/18/22");
+  //   account.withdraw(200);
 
-    const balance = account.printStatement();
+  //   const balance = account.printStatement();
 
-    expect(balance).toEqual([
-      {
-        amount: "+500",
-        balance: 500,
-        date: "2022.12.17",
-      },
-      { amount: "-200", balance: 300, date: "2022.12.18" },
-    ]);
-  });
+  //   expect(balance).toEqual([
+  //     {
+  //       amount: "+500",
+  //       balance: 500,
+  //       date: "2022.12.17",
+  //     },
+  //     { amount: "-200", balance: 300, date: "2022.12.18" },
+  //   ]);
+  // });
 });
