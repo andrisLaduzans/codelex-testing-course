@@ -54,3 +54,7 @@ export class Pipes {
     return this.matrix[x][y];
   };
 }
+
+export function greeter() {
+  alert("hello world form pipes");
+}

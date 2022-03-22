@@ -1,4 +1,4 @@
-import { hello } from "./main";
+import { hello } from ".";
 
 describe("TDD", () => {
   it("should say hello", () => {
