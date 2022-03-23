@@ -1,0 +1,38 @@
+.pipes-board {
+  margin: 24px;
+}
+
+.row {
+  display: flex;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  translate: all 0.4s;
+}
+
+.cell:active {
+  border: 2px solid royalblue;
+}
+
+.end {
+  background-image: url("../assets/pipes/end.png");
+}
+
+.corner {
+  background-image: url("../assets/pipes/corner.png");
+}
+
+.straight {
+  background-image: url("../assets/pipes/straight.png");
+}
+
+.tri {
+  background-image: url("../assets/pipes/tri.png");
+}

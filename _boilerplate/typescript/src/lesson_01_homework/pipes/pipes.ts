@@ -32,6 +32,7 @@ export class Pipes {
         (shape: Shape): Cell => ({
           shape,
           connectors: this.assignConnectors(shape),
+          direction: "down",
         })
       );
       acc.push(newRow);

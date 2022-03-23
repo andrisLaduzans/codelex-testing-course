@@ -22,6 +22,24 @@ describe("board", () => {
     const board = new Pipes(4);
     const tri = board.rotateCell({ x: 1, y: 1 });
     expect(tri.connectors).toEqual([1, 1, 0, 1]);
+
+    const { direction } = tri;
+    expect(direction).toBe("left");
+  });
+
+  it("cell should be able to rotate all around the axis", () => {
+    const board = new Pipes(3);
+    const { direction } = board.rotateCell({ x: 0, y: 0 });
+    expect(direction).toBe("left");
+
+    const directionUp = board.rotateCell({ x: 0, y: 0 }).direction;
+    expect(directionUp).toBe("up");
+
+    const directionRight = board.rotateCell({ x: 0, y: 0 }).direction;
+    expect(directionRight).toBe("right");
+
+    const directionDown = board.rotateCell({ x: 0, y: 0 }).direction;
+    expect(directionDown).toBe("down");
   });
 
   it("should be able to draw smaller 3x3 matrix", () => {

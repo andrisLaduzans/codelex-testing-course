@@ -7,7 +7,7 @@ export type Direction = typeof directions[number];
 export type Connectors = [number, number, number, number];
 
 export type Cell = {
-  direction?: Direction;
+  direction: Direction;
   connectors: Connectors;
   shape: Shape;
   isOrigin?: boolean;
